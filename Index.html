@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Test de Preloaders</title>
+    <link rel="stylesheet" type="text/css" href="main.css?v=1.0">
+    <link rel="stylesheet" type="text/css" href="Preloader.css?v=1.0">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="main.js"></script>>
+</head>
+
+<body>
+    <div id="preloader_1">
+        <div id="preloader_1_pagename">PRELOADERS</div>
+        <div id="preloader_1_loader"></div>
+        <div id="preloader_1_loader_text_sub">Chargement des données ....<br/>veuillez patienter</div>
+    </div>
+
+    <div id="uc_menu"></div>
+    <div id="content">
+        <div id="sidepanel">
+        </div>
+        <div id="view">
+        </div>
+    </div>
+    <div id="uc_footer">
+        <img class="footer-icone" src="cursor-gif-6.gif" /><span> Passez sur le curseur sur les différents élements de la page pour obtenir les explications correspondantes.</span>
+
+    </div>
+</body>
+<script type="text/javascript">
+    $(document).ready(function() {
+        var page = new Loader();
+        page.Init();
+    });
+</script>
+
+</html>
