@@ -7,7 +7,6 @@
     background-color: black;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    animation: zoomin_preloader_1 .2s ease-in 1;
     z-index: 2;
 }
 
@@ -72,7 +71,7 @@
 }
 
 .loaded #preloader_1 {
-    transform: translateX(-100%);
+    transform: translateX(+100%);
     visibility: hidden;
     transition: all 0.3s 0.3s ease-out;
 }
@@ -131,4 +130,79 @@
     100% {
         transform: scale(1);
     }
+}
+
+.loaded #preloader_2 {
+    transform: translateY(-100%);
+    visibility: hidden;
+    transition: all 0.3s 0.3s ease-out;
+}
+
+#preloader_2 {
+    position: fixed;
+    /* visibility: hidden;*/
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000000;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 3;
+}
+
+#preloader_2_pagename {
+    position: absolute;
+    margin-left: 25%;
+    margin-top: 10%;
+    text-align: center;
+    font-family: "Arial Black", arial;
+    font-weight: bolder;
+    font-size: 10vh;
+    width: 50%;
+    text-align: center;
+}
+
+#cars_loadingtext {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 50vh;
+    color: rgb(255, 255, 255);
+}
+
+#cars {
+    position: absolute;
+    width: 350px;
+    height: 50px;
+    top: 40vh;
+    left: 50%;
+    margin-left: -175px;
+    background-color: transparent;
+    background-image: url("cars.svg");
+    background-repeat: repeat-x;
+    animation: test 5s infinite linear;
+    border-bottom: 3px solid black;
+}
+
+@keyframes test {
+    0% {
+        background-position-x: -350px;
+    }
+    100% {
+        background-position-x: 350px;
+    }
+}
+
+#computer {
+    position: absolute;
+    width: 100px;
+    height: 105px;
+    left: 50%;
+    margin-left: 160px;
+    top: calc(42vh - 23px);
+    background-color: transparent;
+    background-image: url("computer.png");
+    background-size: 100px 150px;
+    background-size: contain;
 }
